@@ -1,0 +1,280 @@
+{
+  "name": "心理学",
+  "subtitle": "普通心理学 + 教育心理学 · 全库分章节题库",
+  "source": "超格教育《心理学》全套课件与章节练习题（F:/xinli，167 个文件）",
+  "ns": "xinli",
+  "chapters": [
+    {
+      "no": 1,
+      "name": "心理学概述",
+      "src": "src/01.md",
+      "ana": "ana/1.py",
+      "guide": "guide/1.py",
+      "module": "普通心理学"
+    },
+    {
+      "no": 2,
+      "name": "意识和注意",
+      "src": "src/03.md",
+      "ana": "ana/2.py",
+      "guide": "guide/2.py",
+      "module": "普通心理学"
+    },
+    {
+      "no": 3,
+      "name": "感知觉",
+      "src": "src/06.md",
+      "ana": "ana/3.py",
+      "guide": "guide/3.py",
+      "module": "普通心理学"
+    },
+    {
+      "no": 4,
+      "name": "记忆",
+      "src": "src/t04.md",
+      "ana": "ana/4.py",
+      "module": "普通心理学",
+      "guide": "guide/4.py"
+    },
+    {
+      "no": 5,
+      "name": "表象与想象",
+      "src": "src/t05.md",
+      "ana": "ana/5.py",
+      "module": "普通心理学",
+      "guide": "guide/5.py"
+    },
+    {
+      "no": 6,
+      "name": "思维",
+      "src": "src/t06.md",
+      "ana": "ana/6.py",
+      "module": "普通心理学",
+      "guide": "guide/6.py"
+    },
+    {
+      "no": 7,
+      "name": "情绪情感",
+      "src": "src/t07.md",
+      "ana": "ana/7.py",
+      "module": "普通心理学",
+      "guide": "guide/7.py"
+    },
+    {
+      "no": 8,
+      "name": "意志",
+      "src": "src/t08.md",
+      "ana": "ana/8.py",
+      "module": "普通心理学",
+      "guide": "guide/8.py"
+    },
+    {
+      "no": 9,
+      "name": "个性倾向性",
+      "src": "src/t09.md",
+      "ana": "ana/9.py",
+      "module": "普通心理学",
+      "guide": "guide/9.py"
+    },
+    {
+      "no": 10,
+      "name": "能力",
+      "src": "src/t10.md",
+      "ana": "ana/10.py",
+      "module": "普通心理学",
+      "guide": "guide/10.py"
+    },
+    {
+      "no": 11,
+      "name": "人格",
+      "src": "src/t11.md",
+      "ana": "ana/11.py",
+      "module": "普通心理学",
+      "guide": "guide/11.py"
+    },
+    {
+      "no": 12,
+      "name": "社会心理",
+      "src": "src/t12.md",
+      "ana": "ana/12.py",
+      "module": "普通心理学",
+      "guide": "guide/12.py"
+    },
+    {
+      "no": 13,
+      "name": "教育心理学概述",
+      "src": "src/t13.md",
+      "ana": "ana/13.py",
+      "module": "教育心理学",
+      "guide": "guide/13.py"
+    },
+    {
+      "no": 14,
+      "name": "学生心理发展概述",
+      "src": "src/t14.md",
+      "ana": "ana/14.py",
+      "module": "教育心理学",
+      "guide": "guide/14.py"
+    },
+    {
+      "no": 15,
+      "name": "皮亚杰认知发展",
+      "src": "src/t15.md",
+      "ana": "ana/15.py",
+      "module": "教育心理学",
+      "guide": "guide/15.py"
+    },
+    {
+      "no": 16,
+      "name": "维果斯基",
+      "src": "src/t16.md",
+      "ana": "ana/16.py",
+      "module": "教育心理学",
+      "guide": "guide/16.py"
+    },
+    {
+      "no": 17,
+      "name": "社会性发展",
+      "src": "src/t17.md",
+      "ana": "ana/17.py",
+      "module": "教育心理学",
+      "guide": "guide/17.py"
+    },
+    {
+      "no": 18,
+      "name": "个别差异与因材施教",
+      "src": "src/t18.md",
+      "ana": "ana/18.py",
+      "module": "教育心理学",
+      "guide": "guide/18.py"
+    },
+    {
+      "no": 19,
+      "name": "学习概述",
+      "src": "src/t19.md",
+      "ana": "ana/19.py",
+      "module": "教育心理学",
+      "guide": "guide/19.py"
+    },
+    {
+      "no": 20,
+      "name": "行为主义学习理论",
+      "src": "src/t20.md",
+      "ana": "ana/20.py",
+      "module": "教育心理学",
+      "guide": "guide/20.py"
+    },
+    {
+      "no": 21,
+      "name": "认知主义学习理论",
+      "src": "src/t21.md",
+      "ana": "ana/21.py",
+      "module": "教育心理学",
+      "guide": "guide/21.py"
+    },
+    {
+      "no": 22,
+      "name": "建构主义学习理论",
+      "src": "src/t22.md",
+      "ana": "ana/22.py",
+      "module": "教育心理学",
+      "guide": "guide/22.py"
+    },
+    {
+      "no": 23,
+      "name": "人本主义学习理论",
+      "src": "src/t23.md",
+      "ana": "ana/23.py",
+      "module": "教育心理学",
+      "guide": "guide/23.py"
+    },
+    {
+      "no": 24,
+      "name": "学习动机",
+      "src": "src/t24.md",
+      "ana": "ana/24.py",
+      "module": "教育心理学",
+      "guide": "guide/24.py"
+    },
+    {
+      "no": 25,
+      "name": "学习策略",
+      "src": "src/t25.md",
+      "ana": "ana/25.py",
+      "module": "教育心理学",
+      "guide": "guide/25.py"
+    },
+    {
+      "no": 26,
+      "name": "学习迁移",
+      "src": "src/t26.md",
+      "ana": "ana/26.py",
+      "module": "教育心理学",
+      "guide": "guide/26.py"
+    },
+    {
+      "no": 27,
+      "name": "知识的学习",
+      "src": "src/t27.md",
+      "ana": "ana/27.py",
+      "module": "教育心理学",
+      "guide": "guide/27.py"
+    },
+    {
+      "no": 28,
+      "name": "技能学习",
+      "src": "src/t28.md",
+      "ana": "ana/28.py",
+      "module": "教育心理学",
+      "guide": "guide/28.py"
+    },
+    {
+      "no": 29,
+      "name": "态度与品德",
+      "src": "src/t29.md",
+      "ana": "ana/29.py",
+      "module": "教育心理学",
+      "guide": "guide/29.py"
+    },
+    {
+      "no": 30,
+      "name": "问题解决与创造性",
+      "src": "src/t30.md",
+      "ana": "ana/30.py",
+      "module": "教育心理学",
+      "guide": "guide/30.py"
+    },
+    {
+      "no": 31,
+      "name": "心理健康",
+      "src": "src/t31.md",
+      "ana": "ana/31.py",
+      "module": "教育心理学",
+      "guide": "guide/31.py"
+    },
+    {
+      "no": 32,
+      "name": "教师专业成长",
+      "src": "src/t32.md",
+      "ana": "ana/32.py",
+      "module": "教育心理学",
+      "guide": "guide/32.py"
+    },
+    {
+      "no": 33,
+      "name": "教学设计",
+      "src": "src/t33.md",
+      "ana": "ana/33.py",
+      "module": "教育心理学",
+      "guide": "guide/33.py"
+    },
+    {
+      "no": 34,
+      "name": "课堂管理",
+      "src": "src/t34.md",
+      "ana": "ana/34.py",
+      "module": "教育心理学",
+      "guide": "guide/34.py"
+    }
+  ]
+}

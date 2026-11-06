@@ -1,0 +1,16 @@
+# 构建中间产物与大体积素材，不入库
+# 课件逐页长截图（1.2G，可用 _ext/render_all.py 从 F:/xinli 课件 PDF 重新生成）
+_ext/p3/
+_ext/sel/
+_ext/sheet/
+_ext/txt/
+_ext/old_guide/
+_ext/tmp_check.png
+_ext/*.png
+# 运行期缓存与截图
+_work/
+__pycache__/
+*.pyc
+*.pyo
+# 校验时从 HTML 提取的内联脚本
+_check.js
