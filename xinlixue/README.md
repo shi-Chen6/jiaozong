@@ -35,8 +35,16 @@ xinlixue/
 ├─ 题库校验报告.md         逐章题量统计 + 一致性校验结果
 ├─ 资料归并说明.md         课件 → 题目的归并口径与取舍记录
 ├─ guide/                 NN.py：每章「考点速览」知识卡数据源（导出 GUIDE）
+├─ ana/                   NN.py：每章逐题解析文案（ANA 列表，条数须与题量一致）
 ├─ src/                   课件逐章转录稿（md，题目抽取的输入）
-├─ tools/                 抽取、校验、报告、截图脚本
+├─ quiz.json              构建清单：34 章的 src / ana / guide 三路文件对应关系
+├─ build/                 构建与校验脚本（单文件页由它生成）
+│  ├─ scripts/build.py    配置 + 题目 + 解析 + 知识卡 + 模板 → 单文件 HTML
+│  ├─ scripts/verify.py   题库一致性校验，产出校验报告
+│  ├─ scripts/parse.py    题目文本解析（被 build.py 引用）
+│  ├─ scripts/smoke.js    极简 DOM 桩，在 node 里跑一遍页面逻辑
+│  └─ assets/template.html 页面模板（样式与前端逻辑全在这里）
+├─ tools/                 抽取、报告、截图等辅助脚本
 └─ _ext/
    ├─ GUIDE_SPEC.md       知识卡数据格式规范
    ├─ T_SPEC.md           逐页转录格式规范
@@ -52,19 +60,38 @@ xinlixue/
 ```
 F:/xinli 课件 PDF ──render_all.py──▶ 页面 PNG ──转录──▶ _ext/t/*.md
                                                       │
-                                        guide/NN.py ◀─┴─▶ tools/import_all.py
-                                                    │
-                                          心理学习题数据.json
-                                                    │
-                                            构建 → 心理学刷题.html
-                                                    │
-                                    tools/report.py → 题库校验报告.md
+                                    src/*.md ◀────────┘
+                                        │
+                            quiz.json (src/ana/guide 三路对应)
+                                        │
+                     ┌──────────────────┼──────────────────┐
+                 src/*.md            ana/N.py           guide/N.py
+                 题目与选项           逐题解析           先导知识卡
+                     └──────────────────┼──────────────────┘
+                                        ▼
+                        build/scripts/build.py  ──▶  心理学刷题.html
+                                                   + 心理学习题数据.json
+                                        │
+                        build/scripts/verify.py ──▶  题库校验报告.md
 ```
 
-校验三步（每批固定）：
+重建只需两条命令（在 `xinlixue/` 目录下）：
 
-1. `python tools/report.py` 生成校验报告，一致性异常必须为 0
-2. 从 HTML 提取内联脚本为 `_check.js`，`node tools/smoke.js` 全库渲染冒烟
+```bash
+python build/scripts/build.py quiz.json      # 生成 HTML + JSON
+python build/scripts/verify.py 心理学刷题.html -o 题库校验报告.md
+```
+
+当前仓库内容重建结果与已发布页面**字节一致**（md5 `c75de8fb…`），校验结果：2239 题 / 34 章 / 79 节，先导知识 34 章 100 节 1435 块（329 表、286 口诀、7 插图），一致性异常 0 处。
+
+依赖：Python 3.9+、Pillow（插图压缩）、PyMuPDF（课件渲染）、node（冒烟测试）、playwright（截图自检）。
+
+`build/` 下的脚本与模板来自本地 `quiz-web-builder` 工具链，随仓库固定一份，保证不装该技能也能离线重建。
+
+交付前固定三步自检：
+
+1. `python build/scripts/verify.py 心理学刷题.html -o 题库校验报告.md`，一致性异常必须为 0
+2. 从 HTML 提取内联脚本为 `_check.js`，`node build/scripts/smoke.js` 全库渲染冒烟，失败数 0
 3. `python tools/shot.py` 430px 分段截图，逐屏检查版式与 JS 报错
 
 ## 入库口径
